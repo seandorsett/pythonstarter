@@ -59,6 +59,8 @@ http://127.0.0.1:5000
 
 3. Start managing your tasks!
 
+**Note**: For production deployment, use a production WSGI server like Gunicorn or uWSGI instead of the built-in Flask development server.
+
 ## Project Structure
 
 ```
