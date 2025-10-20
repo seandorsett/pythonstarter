@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block title %}Edit Task - Task Manager{% endblock %}
+
+{% block content %}
+<div class="card">
+    <h2 style="margin-bottom: 20px; color: #333;">✏️ Edit Task</h2>
+    <form method="POST">
+        <div class="form-group">
+            <label for="title">Title *</label>
+            <input type="text" id="title" name="title" value="{{ task.title }}" placeholder="Enter task title" required>
+        </div>
+        <div class="form-group">
+            <label for="description">Description</label>
+            <textarea id="description" name="description" placeholder="Enter task description (optional)">{{ task.description }}</textarea>
+        </div>
+        <div style="display: flex; gap: 10px;">
+            <button type="submit" class="btn btn-primary">💾 Save Changes</button>
+            <a href="{{ url_for('index') }}" class="btn btn-secondary">↩️ Cancel</a>
+        </div>
+    </form>
+</div>
+{% endblock %}
